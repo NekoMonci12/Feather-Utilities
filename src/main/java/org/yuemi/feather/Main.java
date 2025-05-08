@@ -1,4 +1,4 @@
-package org.yuemi.yuelicenser;
+package org.yuemi.feather;
 
 // Bukkit
 import org.bukkit.Bukkit;
@@ -9,21 +9,22 @@ import org.bukkit.event.EventHandler;
 // PlaceholderAPI
 //import me.clip.placeholderapi.PlaceholderAPI;
 //import me.clip.placeholderapi.expansion.PlaceholderExpansion;
+// YueMi
+import org.yuemi.feather.functions.LoggerUtil;
 
 public class Main extends JavaPlugin {
-    public enum LogType {
-        NONE, LOW, MEDIUM, HIGH
-    }
-    private LogType logType = LogType.LOW;
+    String pluginName = getDescription().getName();
+
+
     @Override
     public void onEnable() {
-        // Save the default config if it doesn't exist yet
-        saveDefaultConfig();
+        saveDefaultConfig(); // Save the default config if it doesn't exist yet
+        LoggerUtil.logs(1, "Enabling " + pluginName);
     }
 
 
     @Override
     public void onDisable() {
-        // Implement Here
+        LoggerUtil.logs(1, "Disabling " + pluginName);
     }
 }
