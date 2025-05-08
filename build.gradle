@@ -9,7 +9,10 @@ repositories {
     mavenCentral()
     maven { url 'https://repo.extendedclip.com/content/repositories/placeholderapi/' }
     maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
-    maven { url 'https://mvn.lumine.io/repository/maven-public/' }
+    maven {
+        name = "feather-repo"
+        url = uri("https://repo.feathermc.net/artifactory/maven-releases")
+    }
 }
 
 dependencies {
@@ -18,8 +21,8 @@ dependencies {
     implementation 'org.json:json:20210307'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30'
     //compileOnly 'me.clip:placeholderapi:2.10.10'
-    compileOnly 'org.spigotmc:spigot-api:1.20.1-R0.1-SNAPSHOT'
-    compileOnly 'io.lumine:Mythic-Dist:5.6.1'
+    compileOnly("net.digitalingot.feather-server-api:api:0.0.5")
+    compileOnly 'org.spigotmc:spigot-api:1.21.4-R0.1-SNAPSHOT'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
