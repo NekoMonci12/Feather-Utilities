@@ -1,0 +1,6 @@
+name: Feather-Utilities
+version: 1.0-SNAPSHOT
+main: org.yuemi.feather.Main
+api-version: 1.20
+author: YueMi
+description: An Minecraft Plugin For Managing Feather Client API Features
