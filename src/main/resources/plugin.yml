@@ -2,6 +2,8 @@ name: Feather-Utilities
 version: 1.0-SNAPSHOT
 main: org.yuemi.feather.Main
 api-version: 1.21.4
+depend: [FeatherServerAPI]
+load-after: [FeatherServerAPI]
 authors: 
 - YueMi
 - NekoMonci12
